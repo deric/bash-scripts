@@ -15,3 +15,5 @@ alias rti='rake test:integration'
 alias cuke='cucumber'
 alias rake='bundle exec rake'
 alias rdbm='rake db:migrate && rake db:test:prepare'
+#when using RVM and bundler, it makes sure that you use correct gemset
+alias gem='bundle exec gem'
