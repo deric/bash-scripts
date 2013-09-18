@@ -4,18 +4,18 @@ PWD="$(cd `dirname $0`; pwd)"
 
 echo "source ${PWD}/all.sh" >> ~/.bash_profile
 
-if [ -f ~/.gitconfig ]; then
+if [ ! -f ~/.gitconfig ]; then
   cp ${PWD}/gitconfig.tpl ~/.gitconfig
 fi
 
-if [ -f ~/.vimrc ]; then
+if [ ! -f ~/.vimrc ]; then
   cp ${PWD}/vimrc.tpl ~/.vimrc
 fi
 
-if [ -d ~/.ssh ]; then
+if [ ! -d ~/.ssh ]; then
   mkdir ~/.ssh
   touch ~/.ssh/config
 fi
 
 source ~/.bash_profile
-
+echo "complete! \n"
