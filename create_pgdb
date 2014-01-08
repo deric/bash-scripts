@@ -1,0 +1,17 @@
+#!/bin/bash
+
+EXPECTED_ARGS=2
+E_BADARGS=65
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: `basename $0` {user} {db}"
+  exit $E_BADARGS
+fi
+
+USER=$1
+DB=$2
+echo -e "creating database '$DB' with owner '$USER'\n"
+
+createuser -E -P $USER
+createdb -O $USER $DB
