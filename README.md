@@ -8,13 +8,15 @@ Installation
 
 Clone in to your home directory
     
-    $ cd
-    $ git clone git://github.com/deric/bash-scripts.git
+    $ git clone git://github.com/deric/bash-scripts.git ~/.scripts && echo "source ~/.scripts/all.sh" >> ~/.bashrc
 
-Add to ~/.bash_profile
+To apply changes immediately just source your `.bashrc` file
 
-    $ echo "source ~/bash-scripts/all.sh" >> ~/.bash_profile
-    $ source ~/.bash_profile
+    $ source ~/.bashrc
+
+Some distributions might use `.bash_profile` instead of `.bashrc`, that would mean using following:
+
+    echo "source ~/.scripts/all.sh" >> ~/.bash_profile
 
 
 Usage
