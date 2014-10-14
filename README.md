@@ -8,7 +8,7 @@ Installation
 
 Clone in to your home directory
     
-    $ git clone git://github.com/deric/bash-scripts.git ~/.scripts && echo "source ~/.scripts/all.sh" >> ~/.bashrc
+    $ git clone git://github.com/deric/bash-scripts.git ~/.scripts && bash ~/.scripts/install
 
 To apply changes immediately just source your `.bashrc` file
 
