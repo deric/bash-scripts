@@ -9,6 +9,7 @@
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
   mylog = log --pretty=format:'%h %s [%an]' --graph
+  last = !"git rev-parse HEAD"
 
 [core]
         editor = vim
