@@ -6,3 +6,8 @@ alias gl='git log --oneline --decorate --graph'
 alias gs='git status'
 alias gpo='git pull origin master'
 alias gci='git commit -a'
+
+# usage: kg {commit sha1}
+kg(){
+git diff "$@" | kompare -
+}
