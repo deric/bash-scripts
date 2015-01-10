@@ -17,5 +17,5 @@ if [ ! -d ~/.ssh ]; then
   touch ~/.ssh/config
 fi
 
-source ~/.bash_profile
+source ~/.bashrc
 echo "complete!"
