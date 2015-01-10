@@ -2,7 +2,7 @@
 
 PWD="$(cd `dirname $0`; pwd)"
 
-echo "source ${PWD}/all.sh" >> ~/.bash_profile
+echo "source ${PWD}/all.sh" >> ~/.bashrc
 
 if [ ! -f ~/.gitconfig ]; then
   cp ${PWD}/gitconfig.tpl ~/.gitconfig
