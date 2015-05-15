@@ -1,0 +1,16 @@
+#!/bin/bash
+# converts space separated columns to a file separated by comma
+
+EXPECTED_ARGS=2
+E_BADARGS=65
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: `basename $0` {input.csv} {output_file}"
+  exit $E_BADARGS
+fi
+
+INPUT=$1
+OUTPUT=$2
+sed -e 's/[ :blank:\t]/,/g' ${INPUT} > ${OUTPUT}
+
