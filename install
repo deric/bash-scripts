@@ -11,7 +11,14 @@ fi
 if [ ! -f ~/.vimrc ]; then
   cp ${PWD}/vimrc.tpl ~/.vimrc
 fi
+mkdir -p ~/.vim/ftplugin
+mkdir -p ~/.vim/ftdetect
+# makefile settings
+echo "setlocal noexpandtab" > ~/.vim/ftplugin/make.vim
 
+# iptables highlighting
+wget https://raw.githubusercontent.com/eiginn/iptables-vim/master/syntax/iptables.vim -O ~/.vim/ftplugin/iptables.vim
+echo "au BufNewFile,BufRead *.rules,*.v4,*.v6 set filetype=iptables" > ~/.vim/ftdetect/iptables.vim
 if [ ! -d ~/.ssh ]; then
   mkdir ~/.ssh
   touch ~/.ssh/config
