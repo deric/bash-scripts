@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Usage:
+#        {memory} {factor}
+#
+FACTOR=${2-0.1}
+echo $(echo "$1 + 1024.0 * $FACTOR" | bc)
