@@ -1,0 +1,33 @@
+#!/bin/bash
+# transpose a csv file
+# usage:
+#   $ csvtrans file.csv out.csv
+
+EXPECTED_ARGS=2
+E_BADARGS=65
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+    echo "Usage: `basename $0` {input.csv} {output_file}"
+      exit $E_BADARGS
+    fi
+
+INPUT=$1
+OUTPUT=$2
+
+awk '
+{
+    for (i=1; i<=NF; i++)  {
+        a[NR,i] = $i
+    }
+}
+NF>p { p = NF }
+END {
+    for(j=1; j<=p; j++) {
+        str=a[1,j]
+        for(i=2; i<=NR; i++){
+            str=str" "a[i,j];
+        }
+        print str
+    }
+}' $INPUT > $OUTPUT
