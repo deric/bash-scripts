@@ -7,3 +7,6 @@ drmi(){
   docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
 }
+
+# stop all running containers
+alias dstop='docker stop $(docker ps -a -q)'
