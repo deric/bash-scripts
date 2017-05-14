@@ -23,7 +23,7 @@ if [ ! -d ~/.ssh ]; then
   mkdir ~/.ssh
   touch ~/.ssh/config
 fi
-wget http://git-wt-commit.rubyforge.org/git-wtf -O ~/.scripts/git-wtf
+wget https://raw.githubusercontent.com/michaelklishin/git-wtf/master/git-wtf -O ~/.scripts/git-wtf
 chmod +x ~/.scripts/git-wtf
 
 source ~/.bashrc
