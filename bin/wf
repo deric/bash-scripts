@@ -7,14 +7,14 @@
 # Usage:
 #       wf [n]
 
-tr -cs A-Za-z\' '\n' |         
+tr -cs A-Za-z\' '\n' |
 # Replace nonletters with newlines
-tr A-Z a-z |                 
+tr A-Z a-z |
 #Map uppercase to lowercase
-sort |                     
+sort |
 #Sort the words in ascending order
-uniq -c |                
+uniq -c |
 #Eliminate duplicates, showing their counts
-sort -k1,1nr -k2 |     
+sort -k1,1nr -k2 |
 #Sort by descending count, and then by ascending word
-sed ${1:-25}q  
+sed ${1:-25}q
