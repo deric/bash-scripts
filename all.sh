@@ -12,5 +12,6 @@ source ${DIR}/terminal/rails.sh
 source ${DIR}/terminal/prompt.sh
 source ${DIR}/terminal/puppet.sh
 source ${DIR}/terminal/docker.sh
+source ${DIR}/terminal/dcos.sh
 
 export PATH="$HOME/.scripts/bin:$PATH"
