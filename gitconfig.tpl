@@ -22,5 +22,6 @@
         pretty = oneline
 [push]
         default = simple
-
+[diff]
+        noprefix = true
 
