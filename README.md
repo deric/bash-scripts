@@ -1,23 +1,28 @@
 Collection of terminal aliases
 ------------------------------
 
-A collection of the aliases, shortcuts and prompt customisations we use for Ruby / Rails / git projects
+A collection of the aliases, shortcuts and prompt customisations we use for Linux / Ruby / Rails / git projects
 
 Installation
 ------------
 
 Clone in to your home directory
-    
-    $ git clone git://github.com/deric/bash-scripts.git ~/.scripts && bash ~/.scripts/install
+
+```
+$ git clone git://github.com/deric/bash-scripts.git ~/.scripts && bash ~/.scripts/install
+```
 
 To apply changes immediately just source your `.bashrc` file
 
-    $ source ~/.bashrc
+```
+$ source ~/.bashrc
+```
 
 Some distributions might use `.bash_profile` instead of `.bashrc`, that would mean using following:
 
-    echo "source ~/.scripts/all.sh" >> ~/.bash_profile
-
+```
+echo "source ~/.scripts/all.sh" >> ~/.bash_profile
+```
 
 Usage
 -----
@@ -32,13 +37,21 @@ Shell commands
     $ c   (clear)
     $ p   (pwd)
     $ m   (mate .)
-    
+
+ssh
+
+```
+$ sshf hostname  # (ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null) - won't save ssh keys into known_hosts, won't check fingerprint
+$ scp hostname  # (scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null) - won't save ssh keys into known_hosts, won't check fingerprint
+$ rsynf hostname # won't save ssh keys into known_hosts, won't check fingerprint
+```
+
 Git commands
 
     $ gp  (git pull)
     $ gu  (git push)
     $ gpp (git pull && git push)
-    
+
 Rails commands
 
     $ rt (rake test)
@@ -56,4 +69,4 @@ Contributors
 [Sam Oliver](http://github.com/samoli)
 
 (c) [Pigment](http://www.thinkpigment.com) Released under the MIT license
-    
+

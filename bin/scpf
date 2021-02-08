@@ -1,0 +1,3 @@
+#!/bin/sh
+# Forget mode. Won't store host to known hosts file
+scp -o "UserKnownHostsFile /dev/null" -o "StrictHostKeyChecking false" $@
