@@ -14,5 +14,6 @@ source ${DIR}/terminal/puppet.sh
 source ${DIR}/terminal/docker.sh
 source ${DIR}/terminal/dcos.sh
 source ${DIR}/terminal/jwt.sh
+source ${DIR}/terminal/cloud-native.sh
 
 export PATH="$HOME/.scripts/bin:$PATH"
