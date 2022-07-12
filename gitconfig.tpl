@@ -13,6 +13,7 @@
   mylog = log --pretty=format:'%h %s [%an]' --graph
   last = !"git rev-parse HEAD"
   l = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit --date=relative --all"
+  lf = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 [core]
         editor = vim
