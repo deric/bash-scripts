@@ -20,6 +20,10 @@ function psm {
      sed 's/^/ /' | less
 }
 
+function fwd {
+  eval $(ssh-agent -s)
+  ssh-add -k
+}
 
 function up() { 
 local p= i=${1:-1};
