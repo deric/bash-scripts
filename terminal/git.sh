@@ -11,3 +11,6 @@ alias gci='git commit -a'
 kg(){
 git diff "$@" | kompare -
 }
+batdiff() {
+  git diff --name-only --relative --diff-filter=d | xargs bat --diff
+}

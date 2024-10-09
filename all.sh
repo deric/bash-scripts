@@ -8,7 +8,6 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 source ${DIR}/terminal/git.sh
 source ${DIR}/terminal/shell.sh
-source ${DIR}/terminal/rails.sh
 source ${DIR}/terminal/prompt.sh
 source ${DIR}/terminal/puppet.sh
 source ${DIR}/terminal/docker.sh
