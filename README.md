@@ -9,13 +9,13 @@ Installation
 Clone in to your home directory
 
 ```
-$ git clone git://github.com/deric/bash-scripts.git ~/.scripts && bash ~/.scripts/install
+git clone https://github.com/deric/bash-scripts.git ~/.scripts && bash ~/.scripts/install
 ```
 
 To apply changes immediately just source your `.bashrc` file
 
 ```
-$ source ~/.bashrc
+source ~/.bashrc
 ```
 
 Some distributions might use `.bash_profile` instead of `.bashrc`, that would mean using following:
