@@ -25,6 +25,10 @@ function fwd {
   ssh-add -k
 }
 
+function sshi {
+  ssh -o ForwardAgent=yes $@
+}
+
 function up() { 
 local p= i=${1:-1};
  while (( i-- )); 
