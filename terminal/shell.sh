@@ -25,8 +25,14 @@ function fwd {
   ssh-add -k
 }
 
+# Forward ssh keys from ssh-agent
 function sshi {
   ssh -o ForwardAgent=yes $@
+}
+
+# Forget mode. Won't store host to known hosts file
+function sshf {
+ ssh -o "UserKnownHostsFile /dev/null" -o "StrictHostKeyChecking false" $@
 }
 
 function up() { 

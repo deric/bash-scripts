@@ -1,3 +1,0 @@
-#!/bin/sh
-# Forget mode. Won't store host to known hosts file
-ssh -o "UserKnownHostsFile /dev/null" -o "StrictHostKeyChecking false" $@
